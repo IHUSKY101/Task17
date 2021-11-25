@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 import static io.restassured.RestAssured.given;
 
 public class Task11 {
-    @Test
+    @Test(testName = "Test Basics 1")
     //post scenario
     public void testPostCreate(){
         String baseUri = "https://reqres.in/";
@@ -23,7 +23,7 @@ public class Task11 {
                 .log().all()
                 .statusCode(HttpStatus.SC_CREATED);
     }
-    @Test
+    @Test(testName = "Test Basics 1")
     //get scenario without 200 status code
     public void testGetUserNotFound(){
         given()
@@ -35,7 +35,7 @@ public class Task11 {
                 .log().all()
                 .statusCode(HttpStatus.SC_NOT_FOUND);
     }
-    @Test
+    @Test(testName = "Test Basics 1")
     //get scenario with 200 status code
     public void testGetSingleUser(){
         given()
@@ -47,7 +47,7 @@ public class Task11 {
                 .log().all()
                 .statusCode(HttpStatus.SC_OK);
     }
-    @Test
+    @Test(testName = "Test Basics 1")
     //get scenario with 200 status code
     public void testGetListUsers(){
         given()
